@@ -14,6 +14,7 @@ defmodule Issues.CLI do
       |> parse_args
       |> process
   end
+  defdelegate main(argv), to: __MODULE__, as: :run
 
   @doc """
   `argv` can be -h or --help, which returns :help.
